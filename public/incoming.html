@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+            <script type="text/javascript" src="jquery-ui.min.js"></script>
+            <script type="text/javascript" src="moment.min.js"></script>
+            <script type="text/javascript" src="tabulator.min.js"></script>
+            <script type="text/javascript" src="main.js"></script>
+
+            <link rel="stylesheet" href="tabulator.min.css">
+            <link rel="stylesheet" href="main.css">
+            <title>vcard system</title>
+      </head>
+
+      <body class="db-page">
+            <div class="right-col">
+                  <h3 class="right-title">INCOMING PAGE</h3>
+                  <div class="top-buttons">
+                        <div id="ajax-trigger" class="buttons">refresh table</div>
+                        <div id="download-csv" class="buttons">download XL File</div>
+                        <div id="add-row" class="buttons" onclick="addRow()">add contact</div>
+                        <div id="to-vcard-page" class="buttons" onclick="location.href = '/send.html';">To Vcard</div>
+                  </div>
+                  <div id="example-table"></div>
+            </div>
+      </body>
+</html>

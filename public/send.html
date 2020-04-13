@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+            <script type="text/javascript" src="jquery-ui.min.js"></script>
+            <script type="text/javascript" src="main.js"></script>
+            <script type="text/javascript" src="autocomplete.js"></script>
+            <style>
+              .ui-autocomplete {
+                max-height: 100px;
+                overflow-y: auto;
+                overflow-x: hidden;
+              }
+              * html .ui-autocomplete {
+                height: 100px;
+              }
+            </style>
+            <link rel="stylesheet" href="main.css">
+            <title>vcard system</title>
+      </head>
+      <body  class="send_page">
+            <div class="form_box">
+                  <h3 class="left-title">Send Vcard</h3>
+                  <form id="send-twiml" action="javascript:sendTwiml()">
+                        <fieldset class="twiml-form">
+                              <div class="field-titles">First name:</div>
+                              <input type="text" name="first_name" id="first-name" required>
+                              <div class="field-titles">Last name:</div>
+                              <input type="text" name="last_name" id="last-name" required>
+                              <div class="field-titles">Email:</div>
+                              <input type="email" name="email_address" id="email-address">
+                              <div class="field-titles">Phone:</div>
+                              <input type="number" name="phone_number" maxlength="10" placeholder="numbers only" id="phone-number">
+
+
+                              <!-- <input type="hidden" name="_id" id="id"> -->
+
+
+                              <div class="field-titles">Location:</div>
+                              <div class="radio-box">
+                                    <input type="radio" name="location" value="allstar" class="radio-button" required> :  Allstar<br>
+                                    <input type="radio" name="location" value="magic" class="radio-button">  : Magic
+                              </div>
+                              <hr>
+                              <input type="checkbox" name="msg_check" value="yes" id="check-box" onclick="toggleMsg()"> <span class="custom_msg_title">Custom Message</span>
+                              <div>
+                                    <textarea name="custom_msg" id="custom-msg-box"></textarea>
+                              </div>
+                              <br>
+                              <button class="submit-button buttons" value="Submit">SUBMIT</button>
+                        </fieldset>
+                  </form>
+            </div>
+            <div class="to-contacts-div">
+                  <div id="to-contacts-page" class="buttons" onclick="location.href = '/';">To Contact List</div>
+            </div>
+      </body>
+</html>
